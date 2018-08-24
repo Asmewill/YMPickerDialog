@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="#008cd6"
+            />
+        <LinearLayout
+            android:id="@+id/optionspicker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F3F3"
+            android:orientation="horizontal"
+            android:layout_above="@id/btn_sure"
+          >
+            <com.airsaid.pickerviewlibrary.widget.wheelview.WheelView
+                android:id="@+id/options1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.airsaid.pickerviewlibrary.widget.wheelview.WheelView
+                android:id="@+id/options2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.airsaid.pickerviewlibrary.widget.wheelview.WheelView
+                android:id="@+id/options3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="年化收益率=利率+奖励比例*12/期数"
+            android:gravity="center"
+            android:background="#FFF0B9"
+            android:textColor="#6F675C"
+            android:layout_above="@id/optionspicker"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="奖励率大于等于"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:textColor="#1a1a1a"
+            android:layout_above="@+id/tv_msg"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    
+</LinearLayout>
